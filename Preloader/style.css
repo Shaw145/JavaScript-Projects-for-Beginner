@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,500&family=Ubuntu:ital,wght@0,400;0,500;0,700;1,500;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+}
+
+.header{
+    min-height: 60vh;
+    background: url("./bg-image.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    position: relative;
+}
+
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+
+nav{
+    min-height: 8vh;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a{
+    color: white;
+}
+
+.container h1{
+    font-size: 2.5rem;
+}
+
+.nav-items{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.headline{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    text-align: center;
+}
+
+.headline h2{
+    font-size: 2.5rem;
+}
+
+.btn{
+    display: inline-block;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-headline{
+    color: black;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+.todo{
+    margin-top: 5rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.form-todo{
+    min-height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+.form-todo input{
+    min-height: 100%;
+}
+.form-todo input[type="text"]{
+    width: 78%;
+    padding: 0.8rem;
+    font-size: 1rem;
+}
+.form-todo input[type="submit"]{
+    width: 20%;
+    background: rgb(44, 55, 63);
+    color: white;
+    font-weight: bold;
+}
+
+.tasks{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(53, 50, 50);
+    color: white;
+    margin: 20px;
+    text-align: center;
+    padding: 3px;
+    border-radius: 10px;
+}
+.tasks p{
+    font-size: 1.3rem;
+    padding: 12px;
+}
+.submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+.submit button{
+    font-size: 1rem;
+    background-color: beige;
+    font-weight: 600;
+    border-radius: 7px;
+    padding: 7px;
+    cursor: pointer;
+}
+
+.signup{
+    margin: 5rem auto;
+    text-align: center;
+    background: rgb(240, 240, 240);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.signup-form{
+    max-width: 800px;
+    width: 95%;
+    margin: auto;
+    text-align: left;
+}
+
+.signup-form label{
+    display: block;
+}
+.signup-form input{
+    display: block;
+    width: 100%;
+    /* text-align: center; */
+    padding: 0.5rem;
+}
+
+.form-group{
+    margin-top: 1.5rem;
+}
+
+.signup-form textarea{
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.btn-signup{
+    background: rgb(44, 55, 63);
+    color: white;
+    padding: 0.8rem 1.2rem;
+    display: block;
+    margin: auto;
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+
+
+/* CSS for Preloader */
+
+/**************/
+#preloader{
+    background-color: #212121;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.loader {
+    position: relative;
+    width: 120px;
+    height: 90px;
+    margin: 0 auto;
+  }
+  
+  .loader:before {
+    content: "";
+    position: absolute;
+    bottom: 30px;
+    left: 50px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: #2a9d8f;
+    animation: loading-bounce 0.5s ease-in-out infinite alternate;
+  }
+  
+  .loader:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 7px;
+    width: 45px;
+    border-radius: 4px;
+    box-shadow: 0 5px 0 #f2f2f2, -35px 50px 0 #f2f2f2, -70px 95px 0 #f2f2f2;
+    animation: loading-step 1s ease-in-out infinite;
+  }
+  
+  @keyframes loading-bounce {
+    0% {
+      transform: scale(1, 0.7);
+    }
+  
+    40% {
+      transform: scale(0.8, 1.2);
+    }
+  
+    60% {
+      transform: scale(1, 1);
+    }
+  
+    100% {
+      bottom: 140px;
+    }
+  }
+  
+  @keyframes loading-step {
+    0% {
+      box-shadow: 0 10px 0 rgba(0, 0, 0, 0),
+              0 10px 0 #f2f2f2,
+              -35px 50px 0 #f2f2f2,
+              -70px 90px 0 #f2f2f2;
+    }
+  
+    100% {
+      box-shadow: 0 10px 0 #f2f2f2,
+              -35px 50px 0 #f2f2f2,
+              -70px 90px 0 #f2f2f2,
+              -70px 90px 0 rgba(0, 0, 0, 0);
+    }
+  }
+
+
+
