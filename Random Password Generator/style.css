@@ -6,7 +6,6 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-
 }
 
 html, body{
@@ -41,7 +40,7 @@ html, body{
 
 .show-password{
     width: 90%;
-    margin: 40px 0px;
+    margin-top: 40px;
     background-color: white;
     border-radius: 7px;
     display: flex;
@@ -60,6 +59,12 @@ input{
 input:focus{
     border: none;
     outline: none;
+}
+
+#copied-message{
+    padding: 10px;
+    margin-bottom: 40px;
+    color: yellow;
 }
 
 .show-password img{

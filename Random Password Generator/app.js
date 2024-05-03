@@ -1,6 +1,7 @@
 const passwordbox = document.querySelector("#password");
 const copy = document.querySelector("#copy");
 const btn = document.querySelector("#btn");
+const copyMessage = document.querySelector("#copied-message");
 
 const length = 8;
 const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -24,9 +25,13 @@ btn.addEventListener("click", ()=>{
     }
 
     passwordbox.value = password;
+
+    copyMessage.textContent = "";
 })
 
 copy.addEventListener("click", ()=>{
     passwordbox.select(); //This is just to make a visual effect
     navigator.clipboard.writeText(passwordbox.value); //This is the real deal
+    
+    copyMessage.textContent = "*The password is Coppied";
 })
